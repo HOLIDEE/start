@@ -128,7 +128,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/cosa.nxlvl.fr.fr"
+                 "value":"https:\/\/cosa.nxlvl.fr"
                 }],
          "type":"tilelayer",
          "visible":true,
