@@ -219,9 +219,9 @@
                 {
                  "height":64,
                  "id":22,
-                 "name":"",
+                 "name":"Arena",
                  "rotation":0,
-                 "type":"",
+                 "type":"area",
                  "visible":true,
                  "width":96,
                  "x":736,
