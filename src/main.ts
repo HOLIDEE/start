@@ -22,6 +22,22 @@ WA.onInit().then(() => {
 		});	
 	});
 
+// Add action bar button 'CLOUD'.
+	WA.ui.actionBar.addButton({
+		id: 'cloud-btn',
+		label: 'CLOUD',
+		callback: (event) => {
+			console.log('Button clicked', event);
+			WA.ui.modal.openModal({
+				title: "Cloud by Holidée",
+				src: 'https://cloud.holidee.fr',
+				allowApi: true,
+				allow: "fullscreen",
+				position: "center"
+			});	
+		}
+	});
+
     WA.room.area.onEnter('clock').subscribe(() => {
         const today = new Date();
         const time = today.getHours() + ":" + today.getMinutes();
