@@ -9,13 +9,18 @@ let currentPopup: any = undefined;
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     console.log('Scripting API ready');
-    console.log('Player tags: ',WA.player.tags)
+    console.log('Player tags: ',WA.player.tags);
 
-interface PlayerVariableChanged {
-    player: RemotePlayer;
-    value: unknown;
-}
-WA.players.onVariableChange(variableName: string): Observable<PlayerVariableChanged>
+const myLayerSubscriber = WA.room.onEnterLayer("CosaiFrame").subscribe(() => {
+  WA.chat.sendChatMessage("Hello!", "Mr Robot");
+});
+
+WA.room.onLeaveLayer("myLayer").subscribe(() => {
+  WA.chat.sendChatMessage("Goodbye!", "Mr Robot");
+  myLayerSubscriber.unsubscribe();
+});
+
+
 // Action zone "visit"
 	WA.room.area.onEnter('Arena').subscribe(() => {
 		WA.ui.modal.openModal({
