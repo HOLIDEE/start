@@ -11,6 +11,17 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
 
+// Action zone "visit"
+	WA.room.area.onEnter('Arena').subscribe(() => {
+		WA.ui.modal.openModal({
+			title: "Nxlvl Arena",
+			src: 'https://cosa.nxlvl.fr',
+			allowApi: true,
+			allow: "fullscreen",
+			position: "center"
+		});	
+	});
+
     WA.room.area.onEnter('clock').subscribe(() => {
         const today = new Date();
         const time = today.getHours() + ":" + today.getMinutes();
