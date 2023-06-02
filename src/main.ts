@@ -58,20 +58,6 @@ WA.onInit().then(() => {
 		});	
 	});
 
-WA.ui.actionBar.addButton(descriptor: {
-    id: string,
-    label: string,
-    clickCallback: (buttonActionBar: AddButtonActionBar) => void
-}): void
-
-WA.ui.actionBar.addButton(descriptor: {
-    id: string,
-    type: 'action',
-    imageSrc: string,
-    toolTip: string,
-    clickCallback: (buttonActionBar: AddButtonActionBar) => void
-}): void
-
 // Add action bar button 'CLOUD'.
 	WA.ui.actionBar.addButton({
 		id: 'cloud-btn',
