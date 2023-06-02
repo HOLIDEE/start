@@ -42,6 +42,13 @@ interface AddButtonActionBar {
     toolTip: string
 };
 
+WA.ui.actionBar.addButton(descriptor: {
+    id: string,
+    type: 'action',
+    imageSrc: string,
+    toolTip: string,
+}):
+
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     console.log('Scripting API ready');
