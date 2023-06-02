@@ -40,7 +40,7 @@ interface AddButtonActionBar {
     *   the label displayed above the action button. This parameter is nullable.
     */
     toolTip: string
-}
+};
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
