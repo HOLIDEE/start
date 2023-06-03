@@ -25,7 +25,7 @@ WA.room.onLeaveLayer("myLayer").subscribe(() => {
 	WA.room.area.onEnter('Arena').subscribe(() => {
 		WA.ui.modal.openModal({
 			title: "Nxlvl Arena",
-			src: 'https://cosa.nxlvl.fr',
+			src: 'https://cosa.nxlvl.fr/home',
 			allowApi: true,
 			allow: "fullscreen",
 			position: "center"
