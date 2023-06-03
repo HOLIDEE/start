@@ -11,6 +11,12 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags);
 
+WA.ui.actionBar.addButton(descriptor: {
+    id: string,
+    label: string,
+    clickCallback: (buttonActionBar: AddButtonActionBar) => void
+}): void
+
 const myLayerSubscriber = WA.room.onEnterLayer("CosaiFrame").subscribe(() => {
   WA.chat.sendChatMessage("Hello!", "Mr Robot");
 });
